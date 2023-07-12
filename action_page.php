@@ -12,7 +12,8 @@ $guardanapo = $_POST['guardanapo'];
 $bobina = $_POST['bobina'];
 $papelToalha = $_POST['papelToalha'];
 
-$sql = "INSERT INTO compras_favareto (dataHoje, sucoMa, guardanapo, bobina, papelToalha) VALUES ('$hoje', '$sucoMa', '$guardanapo', '$bobina', '$papelToalha')";
+$sql = "INSERT INTO compras_favareto (dataHoje, sucoMa, guardanapo, bobina, papelToalha) 
+VALUES ('$hoje', '$sucoMa', '$guardanapo', '$bobina', '$papelToalha')";
 
 $rs = mysqli_query($con, $sql);
 
