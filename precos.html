@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores dos produtos</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__links" href="index.html">Ínicio</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Favareto</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Pietra</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Express</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Praia Brava</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Entremares</a>
+        </nav>
+    </header>
+    <?php
+    $con = mysqli_connect('localhost', 'root', '', 'compras_cafe');
+    $resultado = mysqli_query($con, "SELECT * FROM precos_produtos ORDER BY id DESC LIMIT 1");
+    $produto = mysqli_fetch_assoc($resultado);
+    echo $produto;
+    ?>
+
+    <main class="apresentacao">
+        <div>
+            <!--
+            <form class="inicioFormulario" action="action_page_2.php" method="post">
+                <div class="grupoDeProdutos">
+                    <p class="tituloGrupo">Produtos descartáveis</p><br>
+                    <div class="formulario">
+                        <label for="sucoMa">Suco de maracujá</label><br>
+                        <input type="number" id="sucoMa" name="sucoMa"><br>
+                        
+                    </div>
+                    <div class="formulario">
+                        <label for="guardanapo">Guardanapo</label><br>
+                        <input type="number" id="guardanapo" name="guardanapo"><br>
+                    </div>
+                </div>
+            </form>
+            -->
+        </div>
+        
+        
+
+    </main>
+
+    <footer>
+        <P class="rodape">Desenvolvido por Gabriel Nogueira</P>
+    </footer>
+    
+    
+</body>
+
+</html>
