@@ -46,7 +46,7 @@ body{
 .inicioFormulario{
     padding: 10px 20px;
     display: flex;
-    align-items: center;
+    align-items: start;
     text-align: center;
     justify-content: space-between;
     flex-direction: row;
@@ -58,7 +58,7 @@ body{
 }
 
 .grupoDeProdutos{
-    padding: 20px 40px;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,15 +80,39 @@ body{
     justify-content: space-between;
     flex-direction: row;
     width: 200px;
+    border: 1px solid;
 }
 
-.inputMaiores{
-    width: 80px;
+.formularioObservacoes{
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid;
 }
 
 input{
     width: 30px;
     margin-left: auto;
+}
+
+.inputTexto{
+    margin: 0px;
+    width: auto;
+    height: auto;
+}
+
+.inputObservações{
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+}
+
+
+.inputMaiores{
+    width: 80px;
 }
 
 .rodape{
