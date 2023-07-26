@@ -1,0 +1,110 @@
+ 
+//Arrays de todos os produtos
+    $produtosDescartaveis = array("guardanapo", "bobina", "papelToalha", "fosforo", "gelRechaud");
+    $produtosDeLimpeza = array("esponja","bombril","detergente","perfex","sacoLixo","pano","desinfetante","aguaSanitaria","alcool","sabao");
+    $produtosOutros = array("leite","ovos","pizza","paoNormal","paoIntegral","paoGluten","manteigaSache","melSache","geleiaSache","adocanteSache","acucarSache","salSache");
+    $produtosSecos = array("sucoMa","oleo","farinhaTrigo","acucar","acucarDemerara","milho","molhoTomate","molhoBranco","sucrilhos","achocolatado","leiteCoco","gelatina","fermento",
+    "fermentoBio","cha","cafe","doceLeite","pessego","goiabada","leiteCondensado","cremeLeite","bolachaOreo","adocanteLiquido","aveia","granola","bolacha","chantilly","cocoRalado","amendoim","granulado","suspiro");
+    $hortifruti = array("melancia","melao","abacaxi","mamao","manga","morango","banana","limao","maracuja","laranja","tomate","kiwi","hortela","manjericao","salsinha");
+    $produtosGelados = array("salsicha","ricota","calabresa","peitoFrango","iogurte","queijo","presunto","lombo","margarina","requeijao","paoQueijo","salgados","sassami","sucoLaranja","sucoUva");
+
+
+//Formatado para inserir sql
+guardanapo TINYINT, bobina TINYINT, papelToalha TINYINT, fosforo TINYINT, gelRechaud TINYINT, esponja TINYINT, bombril TINYINT, detergente TINYINT, perfex TINYINT, sacoLixo TINYINT, pano TINYINT, desinfetante TINYINT, aguaSanitaria TINYINT, alcool TINYINT, sabao TINYINT,  leite TINYINT, ovos TINYINT, pizza TINYINT, paoNormal TINYINT, paoIntegral TINYINT, paoGluten TINYINT, manteigaSache TINYINT, melSache TINYINT, geleiaSache TINYINT, adocanteSache TINYINT, acucarSache TINYINT, salSache TINYINT, sucoMa TINYINT, oleo TINYINT, farinhaTrigo TINYINT, acucar TINYINT, acucarDemerara TINYINT, milho TINYINT, molhoTomate TINYINT, molhoBranco TINYINT, sucrilhos TINYINT, achocolatado TINYINT, leiteCoco TINYINT, gelatina TINYINT, fermento TINYINT,
+     fermentoBio TINYINT, cha TINYINT, cafe TINYINT, doceLeite TINYINT, pessego TINYINT, goiabada TINYINT, leiteCondensado TINYINT, cremeLeite TINYINT, bolachaOreo TINYINT, adocanteLiquido TINYINT, aveia TINYINT, granola TINYINT, bolacha TINYINT, chantilly TINYINT, cocoRalado TINYINT, amendoim TINYINT, granulado TINYINT, suspiro TINYINT, melancia TINYINT, melao TINYINT, abacaxi TINYINT, mamao TINYINT, manga TINYINT, morango TINYINT, banana TINYINT, limao TINYINT, maracuja TINYINT, laranja TINYINT, tomate TINYINT, kiwi TINYINT, hortela TINYINT, manjericao TINYINT, salsinha TINYINT, salsicha TINYINT, ricota TINYINT, calabresa TINYINT, peitoFrango TINYINT, iogurte TINYINT, queijo TINYINT, presunto TINYINT, lombo TINYINT, margarina TINYINT, requeijao TINYINT, paoQueijo TINYINT, salgados TINYINT, sassami TINYINT, sucoLaranja TINYINT, sucoUva );
+
+    //CAMPOS DO INSERT
+    guardanapo ,bobina ,papelToalha ,fosforo ,gelRechaud ,esponja ,bombril ,detergente ,perfex ,sacoLixo ,pano ,desinfetante ,aguaSanitaria ,alcool ,sabao , leite ,ovos ,pizza ,paoNormal ,paoIntegral ,paoGluten ,manteigaSache ,melSache ,geleiaSache ,adocanteSache ,acucarSache ,salSache ,sucoMa ,oleo ,farinhaTrigo ,acucar ,acucarDemerara ,milho ,molhoTomate ,molhoBranco ,sucrilhos ,achocolatado ,leiteCoco ,gelatina ,fermento ,fermentoBio ,cha ,cafe ,doceLeite ,pessego ,goiabada ,leiteCondensado ,cremeLeite ,bolachaOreo ,adocanteLiquido ,aveia ,granola ,bolacha ,chantilly ,cocoRalado ,amendoim ,granulado ,suspiro ,melancia ,melao ,abacaxi ,mamao ,manga ,morango ,banana ,limao ,maracuja ,laranja ,tomate ,kiwi ,hortela ,manjericao ,salsinha ,salsicha ,ricota ,calabresa ,peitoFrango ,iogurte ,queijo ,presunto ,lombo ,margarina ,requeijao ,paoQueijo ,salgados ,sassami ,sucoLaranja ,sucoUva );
+
+     //VARIAVEIS DO INSERT
+     $guardanapo ,$bobina ,$papelToalha ,$fosforo ,$gelRechaud ,$esponja ,$bombril ,$detergente ,$perfex ,$sacoLixo ,$pano ,$desinfetante ,$aguaSanitaria ,$alcool ,$sabao ,$ leite ,$ovos ,$pizza ,$paoNormal ,$paoIntegral ,$paoGluten ,$manteigaSache ,$melSache ,$geleiaSache ,$adocanteSache ,$acucarSache ,$salSache ,$sucoMa ,$oleo ,$farinhaTrigo ,$acucar ,$acucarDemerara ,$milho ,$molhoTomate ,$molhoBranco ,$sucrilhos ,$achocolatado ,$leiteCoco ,$gelatina ,$fermento, $fermentoBio ,$cha ,$cafe ,$doceLeite ,$pessego ,$goiabada ,$leiteCondensado ,$cremeLeite ,$bolachaOreo ,$adocanteLiquido ,$aveia ,$granola ,$bolacha ,$chantilly ,$cocoRalado ,$amendoim ,$granulado ,$suspiro ,$melancia ,$melao ,$abacaxi ,$mamao ,$manga ,$morango ,$banana ,$limao ,$maracuja ,$laranja ,$tomate ,$kiwi ,$hortela ,$manjericao ,$salsinha ,$salsicha ,$ricota ,$calabresa ,$peitoFrango ,$iogurte ,$queijo ,$presunto ,$lombo ,$margarina ,$requeijao ,$paoQueijo ,$salgados ,$sassami ,$sucoLaranja ,$sucoUva );
+
+     //PARA BUSCAR NO FORM
+     $guardanapo =$_POST['guardanapo'];
+     $bobina=$_POST['bobina']; 
+     $papelToalha=$_POST['papelToalha']; 
+     $fosforo=$_POST['fosforo']; 
+     $gelRechaud=$_POST['gelRechaud'];
+     $esponja=$_POST['esponja']; 
+     $bombril=$_POST['bombril'];
+     $detergente=$_POST['detergente'];
+     $perfex=$_POST['perfex']; 
+     $sacoLixo=$_POST['sacoLixo']; 
+     $pano=$_POST['pano'];
+     $desinfetante=$_POST['desinfetante']; 
+     $aguaSanitaria=$_POST['aguaSanitaria']; 
+     $alcool=$_POST['alcool'];
+     $sabao=$_POST['sabao']; 
+     $leite=$_POST['leite'];
+     $ovos=$_POST['ovos']; 
+     $pizza=$_POST['pizza']; 
+     $paoNormal=$_POST['paoNormal']; 
+     $paoIntegral=$_POST['paoIntegral'];
+     $paoGluten=$_POST['paoGluten']; 
+     $manteigaSache=$_POST['manteigaSache']; 
+     $melSache=$_POST['melSache']; 
+     $geleiaSache=$_POST['geleiaSache']; 
+     $adocanteSache=$_POST['adocanteSache']; 
+     $acucarSache=$_POST['acucarSache'];
+     $salSache=$_POST['salSache']; 
+     $sucoMa=$_POST['sucoMa'];
+     $oleo=$_POST['oleo'];
+     $farinhaTrigo=$_POST['farinhaTrigo']; 
+     $acucar=$_POST['acucar'];
+     $acucarDemerara=$_POST['acucarDemerara']; 
+     $milho=$_POST['milho']; 
+     $molhoTomate=$_POST['molhoTomate']; 
+     $molhoBranco=$_POST['molhoBranco'];
+     $sucrilhos=$_POST['sucrilhos'];
+     $achocolatado=$_POST['achocolatado']; 
+     $leiteCoco=$_POST['leiteCoco']; 
+     $gelatina=$_POST['gelatina']; 
+     $fermento=$_POST['fermento'];
+    $fermentoBio=$_POST['fermentoBio']; 
+    $cha=$_POST['cha']; 
+    $cafe=$_POST['cafe']; 
+    $doceLeite=$_POST['doceLeite']; 
+    $pessego=$_POST['pessego']; 
+    $goiabada=$_POST['goiabada']; 
+    $leiteCondensado=$_POST['leiteCondensado']; 
+    $cremeLeite=$_POST['cremeLeite'];
+    $bolachaOreo=$_POST['bolachaOreo']; 
+    $adocanteLiquido=$_POST['adocanteLiquido']; 
+    $aveia=$_POST['aveia']; 
+    $granola=$_POST['granola']; 
+    $bolacha=$_POST['bolacha'];  
+    $chantilly=$_POST['chantilly']; 
+    $cocoRalado=$_POST['cocoRalado']; 
+    $amendoim=$_POST['amendoim']; 
+    $granulado=$_POST['granulado']; 
+    $suspiro=$_POST['suspiro']; 
+    $melancia=$_POST['melancia']; 
+    $melao=$_POST['melao']; 
+    $abacaxi=$_POST['abacaxi']; 
+    $mamao=$_POST['mamao'];
+    $manga=$_POST['manga']; 
+    $morango=$_POST['morango']; 
+    $banana=$_POST['banana']; 
+    $limao=$_POST['limao']; 
+    $maracuja=$_POST['maracuja']; 
+    $laranja=$_POST['laranja']; 
+    $tomate=$_POST['tomate']; 
+    $kiwi=$_POST['kiwi']; 
+    $hortela=$_POST['hortela']; 
+    $manjericao=$_POST['manjericao']; 
+    $salsinha=$_POST['salsinha']; 
+    $salsicha=$_POST['salsicha'];
+    $ricota=$_POST['ricota']; 
+    $calabresa=$_POST['calabresa']; 
+    $peitoFrango=$_POST['peitoFrango']; 
+    $iogurte=$_POST['iogurte']; 
+    $queijo=$_POST['queijo']; 
+    $presunto=$_POST['presunto']; 
+    $lombo=$_POST['lombo']; 
+    $margarina=$_POST['margarina']; 
+    $requeijao=$_POST['requeijao']; 
+    $paoQueijo=$_POST['paoQueijo']; 
+    $salgados=$_POST['salgados']; 
+    $sassami=$_POST['sassami']; 
+    $sucoLaranja=$_POST['sucoLaranja'];
+    $sucoUva=$_POST['sucoUva'];

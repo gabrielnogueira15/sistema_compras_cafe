@@ -24,51 +24,42 @@
     </header>
 
     <?php
+    
     //Arrays de todos os produtos
-    $produtosDescartaveis = array("guardanapo", "bobina", "papelToalha", "fosforo", "gelRechaud");
+    $produtosDescartaveis = array("p_guardanapo", "bobina", "papelToalha", "fosforo", "gelRechaud");
     $produtosDeLimpeza = array("esponja","bombril","detergente","perfex","sacoLixo","pano","desinfetante","aguaSanitaria","alcool","sabao");
     $produtosOutros = array("leite","ovos","pizza","paoNormal","paoIntegral","paoGluten","manteigaSache","melSache","geleiaSache","adocanteSache","acucarSache","salSache");
-    $produtosSecos = array("sucoMa","oleo","farinhaTrigo","acucar","acucarDemerara","milho","molhoTomate","molhoBranco","sucrilhos","achocolatado","leiteCoco","gelatina","fermento",
+    $produtosSecos = array("p_sucoMa","oleo","farinhaTrigo","acucar","acucarDemerara","milho","molhoTomate","molhoBranco","sucrilhos","achocolatado","leiteCoco","gelatina","fermento",
     "fermentoBio","cha","cafe","doceLeite","pessego","goiabada","leiteCondensado","cremeLeite","bolachaOreo","adocanteLiquido","aveia","granola","bolacha","chantilly","cocoRalado","amendoim","granulado","suspiro");
     $hortifruti = array("melancia","melao","abacaxi","mamao","manga","morango","banana","limao","maracuja","laranja","tomate","kiwi","hortela","manjericao","salsinha");
     $produtosGelados = array("salsicha","ricota","calabresa","peitoFrango","iogurte","queijo","presunto","lombo","margarina","requeijao","paoQueijo","salgados","sassami","sucoLaranja","sucoUva");
-
+    /*
 	$i = 0;
     while($i < sizeof($produtosSecos)){
         printf($produtosSecos[$i]."<br>");
 		
         $i++;
     }
+    */
+
 
     //Conexão com banco
     $con = mysqli_connect('localhost', 'root', '', 'compras_cafe');
-    $resultado = mysqli_query($con, "SELECT * FROM precos_produtos ORDER BY id DESC LIMIT 1");
+    $resultado = mysqli_query($con, "SELECT * FROM precos_produtos");
     
-    //Talvez não vá usar  -- $produto = mysqli_fetch_assoc($resultado);
-    //Talvez não vá usar  -- echo $produto;
 
     //Teste printar preços
     //Produtos descartáveis
-        while($obj = mysqli_fetch_assoc($resultado))
-        {
-            print("Guardanapo: ".$obj["guardanapo"]."\n");
-
-            //Testar se consigo colocar variável dentro do colchetes
-            $i = 0;
-            print("Guardanapo: ".$obj[produtosDescartaveis[$i]]."\n");
-            $i++;
-
-            print("Bobina: ".$obj["bobina"]."\n");
-            print("Papel Toalha: ".$obj["papelToalha"]."\n");
-            print("Fósforo: ".$obj["fosforo"]."\n");
-            print("Gel Rechaud: ".$obj["gelRechaud"]."\n");
-       }
-
+    
+    $somaG = 0;
+    $somaS = 0;
        while($linha = mysqli_fetch_array ($resultado) ) 
        {
-        $codigo = $linha['codigo_cliente'];
-        $item = $linha['nome'];
+        print("Guardanapo: ".$linha[$produtosDescartaveis[0]]."<br>");
+        print("Bobina: ".$linha["p_sucoMa"]."<br>");
+
        }
+       print($somaG);
 
     ?>
 

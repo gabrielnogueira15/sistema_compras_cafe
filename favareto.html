@@ -19,10 +19,18 @@
         </nav>
     </header>
     <main class="apresentacao">
-        <div>
-            <form class="inicioFormulario" action="action_page.php" method="post">
-   
+            <form class="inicioFormulario" action="insere_dados.php" method="post">
                 <div class="grupoDeProdutos">
+                    <div class="formularioObservacoes">
+                        <label class="tituloGrupo" for="nomeHotel">Selecione o hotel desejado:</label><br>
+                        <select id="nomeHotel" name="nomeHotel">
+                            <option value="compras_favareto">Favareto</option>
+                            <option value="compras_pietra">Pietra</option>
+                            <option value="compras_express">Express</option>
+                            <option value="compras_praiaBrava">Praia Brava</option>
+                            <option value="compras_entremares">Entremares</option>
+                        </select><br>
+                    </div><br>
                     <p class="tituloGrupo">Produtos descartáveis</p><br>
                     <div class="formulario">
                         <label for="guardanapo">Guardanapo</label><br>
@@ -441,7 +449,6 @@
                 </div>
             
             </form> 
-        </div>
     </main>
     <footer>
         <p class="rodape">Desenvolvido por Gabriel Nogueira</p>

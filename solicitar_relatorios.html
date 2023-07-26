@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__links" href="index.html">Ínicio</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Favareto</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Pietra</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Express</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Praia Brava</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Entremares</a>
+        </nav>
+    </header>
+    <main>
+        <form action="relatorios.php" method="post">
+            <div class="formulario">
+                <label for="hotelRelatorio">Selecione o hotel desejado:</label>
+                <select id="hotelRelatorio" name="hotelRelatorio">
+                    <option value="compras_favareto">Favareto</option>
+                    <option value="compras_pietra">Pietra</option>
+                    <option value="compras_express">Express</option>
+                    <option value="compras_praiaBrava">Praia Brava</option>
+                    <option value="compras_entremares">Entremares</option>
+                </select>
+            </div><br>
+            <div class="formulario">
+                <label for="numeroMes">Informe o mês desejado:</label>
+                <input type="number" id="numeroMes" name="numeroMes" min="0" max="12">
+            </div><br>
+            <div class="formulario">
+                <input class="inputMaiores" type="submit" value="Buscar">
+            </div><br>
+        </form>
+    </main>
+
+    <footer>
+        <p class="rodape">Desenvolvido por Gabriel Nogueira</p>
+    </footer>
+</body>
+</html>
