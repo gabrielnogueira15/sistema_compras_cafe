@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__links" href="index.html">Ínicio</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Favareto</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Pietra</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Express</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Praia Brava</a>
+            <a class="cabecalho__menu__links" href="favareto.html">Entremares</a>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valores dos produtos</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-
-<body>
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__links" href="index.html">Ínicio</a>
-            <a class="cabecalho__menu__links" href="favareto.html">Favareto</a>
-            <a class="cabecalho__menu__links" href="favareto.html">Pietra</a>
-            <a class="cabecalho__menu__links" href="favareto.html">Express</a>
-            <a class="cabecalho__menu__links" href="favareto.html">Praia Brava</a>
-            <a class="cabecalho__menu__links" href="favareto.html">Entremares</a>
-        </nav>
-    </header>
 
     <?php
     $produtos = array("guardanapo", "bobina", "papelToalha", "fosforo", "gelRechaud", 
@@ -29,79 +8,67 @@
     "melancia","melao","abacaxi","mamao","manga","morango","banana","limao","maracuja","laranja","tomate","kiwi","hortela","manjericao","salsinha",
     "salsicha","ricota","calabresa","peitoFrango","iogurte","queijo","presunto","lombo","margarina","requeijao","paoQueijo","salgados","sassami","sucoLaranja","sucoUva"
     );
-    $hoteis = array("Favareto", "Pietra", "Express", "Praia Brava", "Entremares");
-    $hoteisRelatorio = array("compras_favareto", "compras_pietra", "compras_express", "compras_praiaBrava", "compras_entremares");
-    //------------
 
-    $con = mysqli_connect('localhost', 'root', '', 'compras_cafe');
-
-    //Cliente escolhe hotel e mês desejado para o relatõrio
     $hotelRelatorio = $_POST['hotelRelatorio'];
     $numeroMes = $_POST['numeroMes'];
 
+    $con = mysqli_connect('localhost', 'root', '', 'compras_cafe');
 
-    $resultado = mysqli_query($con, "SELECT SUM(guardanapo) as guardanapo, SUM(bobina) as bobina FROM compras_favareto WHERE MONTH(dataHoje) = $numeroMes and nomeHotel = '$hotelRelatorio'");
-
-    echo '<table border="1" cellspacing="2" cellpadding="2">
-        <caption>Favareto</caption>
-        <tr>
-            <td> <font face ="Arial">Valor 1</font> </td>
-            <td> <font face ="Arial">Valor 2</font> </td>
-        </tr>';
-
-    $linha = mysqli_fetch_array ($resultado);
+    $resultado = mysqli_query($con, "SELECT SUM(guardanapo) as guardanapo, SUM(bobina) as bobina,  SUM(papelToalha) as papelToalha,
+    SUM(fosforo) as fosforo, SUM(gelRechaud) as gelRechaud, SUM(esponja) as esponja, SUM(bombril) as bombril, SUM(detergente) as detergente,
+    SUM(perfex) as perfex, SUM(sacoLixo) as sacoLixo, SUM(pano) as pano, SUM(desinfetante) as desinfetante, SUM(aguaSanitaria) as aguaSanitaria,
+    SUM(alcool) as alcool, SUM(sabao) as sabao, SUM(leite) as leite, SUM(ovos) as ovos, SUM(pizza) as pizza, SUM(paoNormal) as paoNormal, 
+    SUM(paoIntegral) as paoIntegral, SUM(paoGluten) as paoGluten, SUM(manteigaSache) as manteigaSache, SUM(melSache) as melSache, 
+    SUM(geleiaSache) as geleiaSache, SUM(adocanteSache) as adocanteSache, SUM(acucarSache) as acucarSache, SUM(leite) as leite, SUM(salSache) as salSache, 
+    SUM(sucoMa) as sucoMa, SUM(oleo) as oleo, SUM(farinhaTrigo) as farinhaTrigo, SUM(acucar) as acucar, SUM(acucarDemerara) as acucarDemerara,
+    SUM(milho) as milho, SUM(molhoTomate) as molhoTomate, SUM(molhoBranco) as molhoBranco, SUM(sucrilhos) as sucrilhos, SUM(achocolatado) as achocolatado, 
+    SUM(leiteCoco) as leiteCoco, SUM(gelatina) as gelatina, SUM(fermento) as fermento, SUM(fermentoBio) as fermentoBio, SUM(cha) as cha,
+    SUM(cafe) as cafe, SUM(doceLeite) as doceLeite, SUM(pessego) as pessego, SUM(goiabada) as goiabada, SUM(leiteCondensado) as leiteCondensado,
+    SUM(cremeLeite) as cremeLeite, SUM(bolachaOreo) as bolachaOreo, SUM(adocanteLiquido) as adocanteLiquido, SUM(aveia) as aveia, SUM(granola) as granola,
+    SUM(bolacha) as bolacha, SUM(chantilly) as chantilly, SUM(cocoRalado) as cocoRalado, SUM(amendoim) as amendoim, SUM(granulado) as granulado,
+    SUM(suspiro) as suspiro, SUM(melancia) as melancia, SUM(melao) as melao, SUM(abacaxi) as abacaxi, SUM(mamao) as mamao, SUM(manga) as manga,
+    SUM(morango) as morango, SUM(banana) as banana, SUM(limao) as limao, SUM(maracuja) as maracuja, SUM(laranja) as laranja, SUM(tomate) as tomate,
+    SUM(kiwi) as kiwi, SUM(hortela) as hortela, SUM(manjericao) as manjericao, SUM(salsinha) as salsinha,  SUM(salsicha) as salsicha, SUM(ricota) as ricota,
+    SUM(calabresa) as calabresa, SUM(peitoFrango) as peitoFrango, SUM(iogurte) as iogurte, SUM(queijo) as queijo, SUM(presunto) as presunto,
+    SUM(lombo) as lombo, SUM(margarina) as margarina, SUM(requeijao) as requeijao, SUM(paoQueijo) as paoQueijo, SUM(salgados) as salgados,
+    SUM(sassami) as sassami, SUM(sucoLaranja) as sucoLaranja, SUM(sucoUva) as sucoUva
+    FROM compras_favareto WHERE MONTH(dataHoje) = $numeroMes and nomeHotel = '$hotelRelatorio'");
+    $linha = mysqli_fetch_array($resultado);
     $i = 0;
-    $soma = array_fill(0,2,0);
-    while($i < 2)
-    {
-        $soma[$i] = $linha[$produtos[$i]];
-        $i++;
+    $soma = [];
+
+
+    //Gerador de PDF - variavel $arquivoRelatorio
+    use Dompdf\Dompdf;
+    require_once 'dompdf/autoload.inc.php';
+    $dompdf = new Dompdf();
+
+    if($resultado->num_rows > 0){
+
+        $arquivoRelatorio ='<div style="position:relative">';
+        $arquivoRelatorio .='<h1 style="text-align:center;">'.'Somatório do mês '.$numeroMes.' do hotel '.$hotelRelatorio.'</h1>';
+        $arquivoRelatorio .='<div style="position:absolute; left:0pt; width: 192pt;">';
+        $arquivoRelatorio .= '<table border="1" cellspacing="2" cellpadding="2">';
+        while($i < count($produtos)){
+            $soma[$i] = $linha[$produtos[$i]];
+            $arquivoRelatorio .= '<tr style="text-transform:capitalize;"><td>'.$produtos[$i].'</td>';
+            $arquivoRelatorio .= '<td>'.$soma[$i].'</td></tr>';
+            
+            if($i == 30 ){$arquivoRelatorio .='</div><div style="position:absolute; left:200pt; width: 192pt;"><table border="1" cellspacing="2" cellpadding="2">';}
+            if($i == 61 ){$arquivoRelatorio .='</div><div style="margin-left:400pt;"><table border="1" cellspacing="2" cellpadding="2">';}
+            $i++;
+        }
+        $arquivoRelatorio .='</div></div>';
+    }else{
+        $arquivoRelatorio = "Nenhum dado encontrado";
     }
-        echo '<tr>
-                <td>'.$soma[0].'</td>
-                <td>'.$soma[1].'</td>
-            </tr>';
 
-//------------------------------------------------------
+    $dompdf->loadHtml($arquivoRelatorio);
+    $dompdf->set_option('defaultFont', 'sans');
+    $dompdf->setPaper('A4', 'portrait');
+    $dompdf->render();
+    $dompdf->stream(); 
 
-$resultado = mysqli_query($con, "SELECT SUM(guardanapo) as guardanapo, SUM(bobina) as bobina FROM compras_favareto WHERE MONTH(dataHoje) = $numeroMes and nomeHotel = 'compras_pietra'");
-    echo '<table border="1" cellspacing="2" cellpadding="2">
-    <caption>Pietra</caption>
-    <tr>
-        <td> <font face ="Arial">Valor 1</font> </td>
-        <td> <font face ="Arial">Valor 2</font> </td>
-    </tr>';
 
-    $linha = mysqli_fetch_array ($resultado);
-    $i = 0;
-    $soma = array_fill(0,2,0);
-    while($i < 2)
-    {
-        $soma[$i] = $linha[$produtos[$i]];
-        $i++;
-    }
-        echo '<tr>
-                <td>'.$soma[0].'</td>
-                <td>'.$soma[1].'</td>
-            </tr>';
-
-    
-    //TESTE TESTE TESTE----------------------------------
-?>
-    
-    
-    <main class="apresentacao">
-        <div>
-            <h1>Somatório do mês <?php echo $numeroMes?></h1>
-
-        </div>
-    </main>
- 
-    <footer>
-        <p class="rodape">Desenvolvido por Gabriel Nogueira</p>
-    </footer>
-    
-    
-</body>
-
-</html>
+    ?>
+  
